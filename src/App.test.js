@@ -29,12 +29,12 @@ test('initial conditions', () => {
 
   //check that the checkbox starts out unchecked
   const checkbox = screen.getByRole('checkbox');
-  expect(colorButton).not.toBeChecked();
+  expect(checkbox).not.toBeChecked();
 })
 
 test('Checkbox disables button on first click and enables on second click', () => {
   render(<App />);
-  const checkbox = screen.getByRole('checkbox');
+  const checkbox = screen.getByRole('checkbox', { name: 'Disable button' });
   const button = screen.getByRole('button', { name: 'Change to blue' });
 
   fireEvent.click(checkbox);
