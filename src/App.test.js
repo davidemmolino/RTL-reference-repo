@@ -6,25 +6,25 @@ test('button has correct initial color', () => {
   render(<App />);
   // find element that we're interested in
   // button with initial text of 'name'
-  const colorButton = screen.getByRole('button', { name: 'Change to blue'});
+  const colorButton = screen.getByRole('button', { name: 'Change to blue' });
 
-  expect(colorButton).toHaveStyle({ backgroundColor: 'red'});
+  expect(colorButton).toHaveStyle({ backgroundColor: 'red' });
 
   //simulate click
   fireEvent.click(colorButton);
 
   //expect background color to turn to blue
-  expect(colorButton).toHaveStyle({ backgroundColor: 'blue'});
+  expect(colorButton).toHaveStyle({ backgroundColor: 'blue' });
 
   //expect text to change 
   expect(colorButton).toHaveTextContent('Change to red');
 });
 
 test('initial conditions', () => {
-  render(<App/>);
+  render(<App />);
 
   //check that the button starts out enabled
-  const colorButton = screen.getByRole('button', { name: 'Change to blue'});
+  const colorButton = screen.getByRole('button', { name: 'Change to blue' });
   expect(colorButton).toBeEnabled();
 
   //check that the checkbox starts out unchecked
@@ -82,7 +82,7 @@ describe('Spaces before camel-case capital letters', () => {
   test('Works for one inner capital letter', () => {
     expect(replaceCamelWithSpaces('MidnightBlue')).toBe('Midnight Blue');
   });
-  
+
   test('Workst for multiple inner capital letters', () => {
     expect(replaceCamelWithSpaces('MediumVioletRed')).toBe('Medium Violet Red');
   });
