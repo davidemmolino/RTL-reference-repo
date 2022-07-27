@@ -14,3 +14,8 @@ https://testing-library.com/docs/queries/about/#priority
 
 How to write tests? You want to simulate possible user flows. 
 Aka: think of the different ways the client can interact with the component. 
+
+To configure rules for linters yourself, visit these links as reference.
+ - https://github.com/testing-library/eslint-plugin-testing-library
+ - https://github.com/testing-library/eslint-plugin-jest-dom
+
